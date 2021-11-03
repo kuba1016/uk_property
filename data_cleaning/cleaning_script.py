@@ -34,7 +34,7 @@ df.drop(df[df.more_than_3_recep == True].index, inplace=True)
 df["post_code"] = df.address.str.extract(r"([A-Z]{1,2}[0-9]{1,2})")
 
 # selecting final shape of def
-df =df.loc[:,["agent","address","beds","receptions","baths","post_code"]]
+df =df.loc[:,["agent","address","beds","receptions","baths","post_code","price"]]
 
 print(df.head())
 print(df.info())
